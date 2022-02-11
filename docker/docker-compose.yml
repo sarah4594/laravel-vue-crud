@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+    web-server:
+        build:
+            dockerfile: Dockerfile-php-apache
+            context: .
+        restart: always
+        volumes:
+            - "../public/:/var/www/html/"
+        ports:
+            - "8080:80"
+    mysql-server:
+        image: mysql:latest
+        restart: always
+        environment:
+            MYSQL_ALLOW_EMPTY_PASSWORD: yes
+            MYSQL_DATABASE: laravel
+        volumes:
+            - "../db/:/var/lib/mysql/"
+        ports:
+            - "3306:3306"
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin:latest
+        restart: always
+        environment:
+            PMA_HOST: mysql-server
+            PMA_USER: root
+            PMA_PASSWORD:
+        ports:
+            - "8888:80"
