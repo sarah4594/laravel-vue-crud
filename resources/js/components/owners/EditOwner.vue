@@ -5,11 +5,19 @@
             <div class="col-md-6">
                 <form @submit.prevent="updateOwner">
                     <div class="form-group">
-                        <label>Name</label>
+                        <label>First Name</label>
                         <input
                             type="text"
                             class="form-control"
-                            v-model="owner.name"
+                            v-model="owner.first_name"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            v-model="owner.last_name"
                         />
                     </div>
                     <div class="form-group">

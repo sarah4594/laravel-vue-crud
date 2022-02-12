@@ -15,7 +15,8 @@ class OwnerController extends Controller
     public function store(Request $request)
     {
         $owner = new Owner([
-            'name' => $request->input('name'),
+            'first_name' => $request->input('first_name'),
+            'last_name' => $request->input('last_name'),
             'email' => $request->input('email'),
             'phone_number' => $request->input('phone_number')
         ]);
