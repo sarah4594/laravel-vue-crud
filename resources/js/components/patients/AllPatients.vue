@@ -9,14 +9,15 @@
                     <th>Name</th>
                     <th>Species</th>
                     <th>Owner</th>
-                    <!-- <th>Actions</th> -->
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="patient in patients" :key="patient.id">
                     <td>{{ patient.id }}</td>
                     <td>{{ patient.name }}</td>
-                    <td>{{ patient.detail }}</td>
+                    <td>{{ patient.species }}</td>
+                    <td>{{ patient.owner }}</td>
                     <td>
                         <div class="btn-group" role="group">
                             <router-link
@@ -38,6 +39,11 @@
                 </tr>
             </tbody>
         </table>
+        <div class="px-4 py-2 bg-red-500 hover:bg-blue-600">
+            <router-link :to="{ name: 'patients:create' }" class="text-red-500">
+                Add Patient</router-link
+            >
+        </div>
     </div>
 </template>
 

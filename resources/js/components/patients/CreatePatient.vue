@@ -45,7 +45,7 @@ export default {
         };
     },
     methods: {
-        addProduct() {
+        addPatient() {
             this.axios
                 .post("/api/patients", this.patient)
                 .then(() => this.$router.push({ name: "patients:list" }))

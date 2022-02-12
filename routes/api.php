@@ -12,8 +12,5 @@ use App\Http\Controllers\OwnerController;
 
 Route::middleware('api')->group(function () {
     Route::resource('patients', PatientController::class);
-});
-
-Route::middleware('api')->group(function () {
     Route::resource('owners', OwnerController::class);
 });

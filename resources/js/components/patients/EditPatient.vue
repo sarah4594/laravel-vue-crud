@@ -50,7 +50,7 @@ export default {
         });
     },
     methods: {
-        updateProduct() {
+        updatePatient() {
             this.axios
                 .patch(`/api/patients/${this.$route.params.id}`, this.patient)
                 .then((res) => {
