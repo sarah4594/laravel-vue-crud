@@ -4,14 +4,14 @@
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav">
                     <router-link
-                        :to="{ name: 'patients:list' }"
+                        :to="{ name: 'owners:list' }"
                         class="nav-item nav-link"
-                        >Patient List</router-link
+                        >Owners</router-link
                     >
                     <router-link
-                        :to="{ name: 'patients:create' }"
+                        :to="{ name: 'patients:list' }"
                         class="nav-item nav-link"
-                        >Create Patient</router-link
+                        >Patients</router-link
                     >
                 </div>
             </div>
