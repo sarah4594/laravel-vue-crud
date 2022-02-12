@@ -9,7 +9,7 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone Number</th>
-                    <!-- <th>Actions</th> -->
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,6 +39,11 @@
                 </tr>
             </tbody>
         </table>
+        <div class="px-4 py-2 bg-blue-500 hover:bg-blue-600">
+            <router-link :to="{ name: 'owners:create' }" class="text-white">
+                Add Owner</router-link
+            >
+        </div>
     </div>
 </template>
 

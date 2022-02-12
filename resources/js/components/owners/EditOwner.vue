@@ -13,19 +13,19 @@
                         />
                     </div>
                     <div class="form-group">
-                        <label>Species</label>
+                        <label>Email</label>
                         <input
-                            type="text"
+                            type="email"
                             class="form-control"
-                            v-model="owner.species"
+                            v-model="owner.email"
                         />
                     </div>
                     <div class="form-group">
-                        <label>Owner</label>
+                        <label>Phone Number</label>
                         <input
                             type="text"
                             class="form-control"
-                            v-model="owner.owner"
+                            v-model="owner.phone_number"
                         />
                     </div>
                     <button type="submit" class="btn btn-primary">
@@ -50,7 +50,7 @@ export default {
         });
     },
     methods: {
-        updateProduct() {
+        updateOwner() {
             this.axios
                 .patch(`/api/owners/${this.$route.params.id}`, this.owner)
                 .then((res) => {

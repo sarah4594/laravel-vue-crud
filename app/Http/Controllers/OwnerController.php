@@ -16,8 +16,8 @@ class OwnerController extends Controller
     {
         $owner = new Owner([
             'name' => $request->input('name'),
-            'species' => $request->input('species'),
-            'owner' => $request->input('owner')
+            'email' => $request->input('email'),
+            'phone_number' => $request->input('phone_number')
         ]);
         $owner->save();
         return response()->json('Owner created!');

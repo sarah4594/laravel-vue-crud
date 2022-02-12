@@ -45,7 +45,7 @@ export default {
         };
     },
     methods: {
-        addProduct() {
+        addOwner() {
             this.axios
                 .post("/api/owners", this.owner)
                 .then(() => this.$router.push({ name: "owners:list" }))
