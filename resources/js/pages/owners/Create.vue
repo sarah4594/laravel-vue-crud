@@ -97,7 +97,14 @@ export default {
         addOwner() {
             this.axios
                 .post("/owners", this.owner)
-                .then(() => this.$router.push({ name: "owners:list" }))
+                .then((result) =>
+                    this.$router.push({
+                        name: "owners:edit",
+                        params: {
+                            id: result.data.id,
+                        },
+                    })
+                )
                 .catch((err) => console.log(err))
                 .finally(() => (this.loading = false));
         },

@@ -21,7 +21,7 @@ class OwnerController extends Controller
             'phone_number' => $request->input('phone_number')
         ]);
         $owner->save();
-        return response()->json('Owner created!');
+        return response()->json($owner);
     }
     public function show($id)
     {

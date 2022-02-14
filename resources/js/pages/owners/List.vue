@@ -120,7 +120,7 @@ export default {
     },
     methods: {
         deleteOwner(id) {
-            this.axios.delete(`/api/owners/${id}`).then(() => {
+            this.axios.delete(`/owners/${id}`).then(() => {
                 let i = this.owners.map((data) => data.id).indexOf(id);
                 this.owners.splice(i, 1);
             });
