@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Patient;
+use App\Models\Owner;
 
 class PatientController extends Controller
 {
@@ -27,7 +28,8 @@ class PatientController extends Controller
     public function show($id)
     {
         $patient = Patient::find($id);
-        return response()->json($patient);
+        $owner = Owner::find($patient->owner_id);
+        return response()->json(['patient'=>$patient, 'owner'=>$owner]);
     }
     public function update($id, Request $request)
     {

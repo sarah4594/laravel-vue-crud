@@ -1,6 +1,8 @@
 <template>
     <div>
-        <h3 class="text-center mt-8">Update Patient</h3>
+        <h3 class="text-center mt-8">
+            Update Patient for {{ owner.first_name }} {{ owner.last_name }}
+        </h3>
         <div class="row mt-12">
             <div class="col-md-6">
                 <form @submit.prevent="updatePatient">
@@ -90,21 +92,6 @@
                                             v-model="patient.birthday"
                                         />
                                     </div>
-                                    <div class="col-span-4 sm:col-span-3">
-                                        <label
-                                            for="owner"
-                                            class="block text-sm font-medium text-gray-700"
-                                            >Owner</label
-                                        >
-                                        <input
-                                            type="text"
-                                            name="owner"
-                                            id="owner"
-                                            autocomplete="owner"
-                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                            v-model="patient.owner"
-                                        />
-                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -126,11 +113,13 @@ export default {
     data() {
         return {
             patient: {},
+            owner: {},
         };
     },
     created() {
         this.axios.get(`/patients/${this.$route.params.id}`).then((res) => {
-            this.patient = res.data;
+            this.patient = res.data.patient;
+            this.owner = res.data.owner;
         });
     },
     methods: {
