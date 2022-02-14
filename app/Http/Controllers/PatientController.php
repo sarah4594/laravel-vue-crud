@@ -17,6 +17,8 @@ class PatientController extends Controller
         $patient = new Patient([
             'name' => $request->input('name'),
             'species' => $request->input('species'),
+            'color' => $request->input('color'),
+            'birthday' => $request->input('birthday'),
             'owner' => $request->input('owner')
         ]);
         $patient->save();

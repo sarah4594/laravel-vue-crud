@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('species');
+            $table->string('color');
+            $table->string('birthday');
             $table->string('owner');
             $table->timestamps();
         });

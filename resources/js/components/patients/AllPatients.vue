@@ -26,6 +26,16 @@
                         <th
                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                         >
+                            Color
+                        </th>
+                        <th
+                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
+                            Birthday
+                        </th>
+                        <th
+                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                        >
                             Owner
                         </th>
                         <th
@@ -51,6 +61,16 @@
                             class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
                         >
                             {{ patient.species }}
+                        </td>
+                        <td
+                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                        >
+                            {{ patient.color }}
+                        </td>
+                        <td
+                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                        >
+                            {{ patient.birthday }}
                         </td>
                         <td
                             class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
