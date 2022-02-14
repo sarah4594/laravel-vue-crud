@@ -19,10 +19,10 @@ class PatientController extends Controller
             'species' => $request->input('species'),
             'color' => $request->input('color'),
             'birthday' => $request->input('birthday'),
-            'owner' => $request->input('owner')
+            'owner_id' => $request->input('owner_id')
         ]);
         $patient->save();
-        return response()->json('Patient created!');
+        return response()->json($patient);
     }
     public function show($id)
     {

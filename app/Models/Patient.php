@@ -12,7 +12,7 @@ class Patient extends Model
         'species',
         'color',
         'birthday',
-        'owner',
+        'owner_id',
     ];
     use HasFactory;
 }

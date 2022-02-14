@@ -12,7 +12,7 @@ export default function (basePath) {
         },
         {
             name: "create",
-            path: "/create",
+            path: "/create/:owner_id",
             component: CreatePatient,
         },
         {

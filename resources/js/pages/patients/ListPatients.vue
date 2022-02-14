@@ -104,14 +104,6 @@
                 </tbody>
             </table>
         </div>
-        <router-link
-            :to="{ name: 'patients:create' }"
-            class="text-white flex mt-8"
-        >
-            <div class="px-4 py-2 bg-blue-500 hover:bg-blue-400 rounded">
-                Add Patient
-            </div>
-        </router-link>
     </div>
 </template>
 
