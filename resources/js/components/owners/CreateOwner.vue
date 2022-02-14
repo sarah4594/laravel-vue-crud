@@ -75,16 +75,12 @@
                                 v-for="(pet, counter) in pets"
                                 v-bind:key="counter"
                             >
-                                <div class="grid grid-cols-8 gap-6">
+                                <div class="grid grid-cols-8 gap-6 mt-6">
                                     <div class="col-span-4 sm:col-span-3">
-                                        <span @click="deletePet(counter)"
-                                            >x</span
-                                        >
-
                                         <label
                                             for="pets"
                                             class="block text-sm font-medium text-gray-700"
-                                            >{{ counter + 1 }}. Name
+                                            >Name
                                         </label>
                                         <input
                                             type="text"
@@ -95,28 +91,52 @@
 
                                     <div class="col-span-4 sm:col-span-3">
                                         <label
-                                            for="pets"
+                                            for="species"
                                             class="block text-sm font-medium text-gray-700"
                                             >Species</label
                                         >
-                                        <input
-                                            type="text"
+                                        <select
+                                            name="species"
+                                            id="species"
+                                            autocomplete="species"
                                             class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                             v-model="pet.species"
-                                        />
+                                        >
+                                            <option>Dog</option>
+                                            <option>Cat</option>
+                                            <option>Bird</option>
+                                            <option>Hamster</option>
+                                            <option>Fish</option>
+                                            <option>Reptile</option>
+                                            <option>Other</option>
+                                        </select>
                                     </div>
 
                                     <div class="col-span-4 sm:col-span-3">
                                         <label
-                                            for="pets"
+                                            for="color"
                                             class="block text-sm font-medium text-gray-700"
                                             >Color</label
                                         >
-                                        <input
-                                            type="text"
+                                        <select
+                                            name="color"
+                                            id="color"
+                                            autocomplete="color"
                                             class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                            v-model="pet.color"
-                                        />
+                                        >
+                                            <option>White</option>
+                                            <option>Black</option>
+                                            <option>Brown</option>
+                                            <option>Red</option>
+                                            <option>Gold/Blonde</option>
+                                            <option>Gray</option>
+                                            <option>White</option>
+                                            <option>Tuxedo</option>
+                                            <option>Tabby</option>
+                                            <option>Tortoiseshell</option>
+                                            <option>Calico</option>
+                                            <option>Other/Multi</option>
+                                        </select>
                                     </div>
 
                                     <div class="col-span-4 sm:col-span-3">
@@ -126,11 +146,17 @@
                                             >Birthday</label
                                         >
                                         <input
-                                            type="text"
+                                            type="date"
                                             class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                             v-model="pet.birthday"
                                         />
                                     </div>
+                                    <button
+                                        class="text-rose-500"
+                                        @click="deletePet"
+                                    >
+                                        Remove Pet
+                                    </button>
                                 </div>
                             </div>
                             <button @click="addPet" class="text-blue-500 mt-8">
