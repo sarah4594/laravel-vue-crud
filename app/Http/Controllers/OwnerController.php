@@ -39,7 +39,12 @@ class OwnerController extends Controller
     public function destroy($id)
     {
         $owner = Owner::find($id);
+        $patients = Patient::all()->where('owner_id', $id);
+        foreach ($patients as &$patient) {
+            $patient->delete();
+        }
         $owner->delete();
+
         return response()->json('Owner deleted!');
     }
 }

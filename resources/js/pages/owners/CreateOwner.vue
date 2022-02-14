@@ -90,7 +90,6 @@ export default {
     data() {
         return {
             owner: {},
-            pets: [],
         };
     },
     methods: {
@@ -107,14 +106,6 @@ export default {
                 )
                 .catch((err) => console.log(err))
                 .finally(() => (this.loading = false));
-        },
-        addPet() {
-            this.pets.push({
-                name: "",
-                species: "",
-                color: "",
-                birthday: "",
-            });
         },
         deletePet(counter) {
             this.pets.splice(counter, 1);
