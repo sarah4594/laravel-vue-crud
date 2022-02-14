@@ -123,13 +123,13 @@ export default {
         };
     },
     created() {
-        this.axios.get("/api/patients/").then((response) => {
+        this.axios.get("/patients/").then((response) => {
             this.patients = response.data;
         });
     },
     methods: {
         deletePatient(id) {
-            this.axios.delete(`/api/patients/${id}`).then(() => {
+            this.axios.delete(`/patients/${id}`).then(() => {
                 let i = this.patients.map((data) => data.id).indexOf(id);
                 this.patients.splice(i, 1);
             });

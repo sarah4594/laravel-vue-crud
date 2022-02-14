@@ -37,6 +37,7 @@ const routes = [
                 },
             },
             ...ownersRoutes("owners"),
+            ...patientsRoutes("patients"),
         ],
     },
 ];

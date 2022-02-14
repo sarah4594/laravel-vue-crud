@@ -1,6 +1,6 @@
-import AllPatients from "../components/patients/AllPatients.vue";
-import CreatePatient from "../components/patients/CreatePatient.vue";
-import EditPatient from "../components/patients/EditPatient.vue";
+import List from "../pages/patients/List.vue";
+import Create from "../pages/patients/Create.vue";
+import Edit from "../pages/patients/Edit.vue";
 import defineRoutes from "./defineRoutes";
 
 export default function (basePath) {
@@ -8,17 +8,17 @@ export default function (basePath) {
         {
             name: "list",
             path: "/",
-            component: AllPatients,
+            component: List,
         },
         {
             name: "create",
             path: "/create",
-            component: CreatePatient,
+            component: Create,
         },
         {
             name: "edit",
             path: "/edit/:id",
-            component: EditPatient,
+            component: Edit,
         },
     ]);
 }

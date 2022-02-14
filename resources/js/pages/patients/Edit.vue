@@ -129,14 +129,14 @@ export default {
         };
     },
     created() {
-        this.axios.get(`/api/patients/${this.$route.params.id}`).then((res) => {
+        this.axios.get(`/patients/${this.$route.params.id}`).then((res) => {
             this.patient = res.data;
         });
     },
     methods: {
         updatePatient() {
             this.axios
-                .patch(`/api/patients/${this.$route.params.id}`, this.patient)
+                .patch(`/patients/${this.$route.params.id}`, this.patient)
                 .then((res) => {
                     this.$router.push({ name: "patients:list" });
                 });

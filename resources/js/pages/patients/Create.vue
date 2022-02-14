@@ -131,7 +131,7 @@ export default {
     methods: {
         addPatient() {
             this.axios
-                .post("/api/patients", this.patient)
+                .post("/patients", this.patient)
                 .then(() => this.$router.push({ name: "patients:list" }))
                 .catch((err) => console.log(err))
                 .finally(() => (this.loading = false));
