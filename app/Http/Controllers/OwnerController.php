@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Owner;
+use App\Models\Patient;
 
 class OwnerController extends Controller
 {
@@ -26,7 +27,8 @@ class OwnerController extends Controller
     public function show($id)
     {
         $owner = Owner::find($id);
-        return response()->json($owner);
+        $patients = Patient::all()->where('owner_id', $id);
+        return response()->json(['owner'=>$owner, 'patients'=>$patients]);
     }
     public function update($id, Request $request)
     {

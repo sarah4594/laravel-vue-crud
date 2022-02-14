@@ -97,11 +97,11 @@ export default {
         addOwner() {
             this.axios
                 .post("/owners", this.owner)
-                .then((result) =>
+                .then((res) =>
                     this.$router.push({
                         name: "owners:edit",
                         params: {
-                            id: result.data.id,
+                            id: res.data.id,
                         },
                     })
                 )

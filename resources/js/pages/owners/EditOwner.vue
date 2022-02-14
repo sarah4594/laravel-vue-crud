@@ -90,11 +90,13 @@ export default {
     data() {
         return {
             owner: {},
+            patients: [],
         };
     },
     created() {
         this.axios.get(`/owners/${this.$route.params.id}`).then((res) => {
-            this.owner = res.data;
+            this.owner = res.data.owner;
+            this.patients = res.data.patients;
         });
     },
     methods: {
