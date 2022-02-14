@@ -1,6 +1,7 @@
 {
     "private": true,
     "scripts": {
+        "build": "npm run css:build",
         "dev": "npm run development",
         "development": "mix",
         "watch": "concurrently \"mix watch\" \"npm run css:watch\"",
@@ -8,6 +9,7 @@
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production",
+        "css:build": "tailwindcss -i resources/css/tailwind.css -o public/css/tailwind.css",
         "css:watch": "tailwindcss -i resources/css/tailwind.css -o public/css/tailwind.css --watch"
     },
     "devDependencies": {
@@ -29,7 +31,9 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "vee-validate": "^2.2.15",
         "vue-axios": "^3.4.1",
-        "vue-router": "^3.5.3"
+        "vue-router": "^3.5.3",
+        "vuex": "^3.6.2"
     }
 }

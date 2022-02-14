@@ -1,0 +1,13 @@
+#! /bin/sh
+
+cp .env.example .env
+docker/start
+
+composer install
+npm install
+npm run build
+npm run dev
+
+php artisan migrate
+
+echo "App setup complete. Run ./start to start the app."

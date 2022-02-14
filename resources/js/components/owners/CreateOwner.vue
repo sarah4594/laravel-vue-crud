@@ -6,162 +6,143 @@
                 <form @submit.prevent="addOwner">
                     <div class="md:grid md:grid-cols-3 md:gap-6">
                         <div class="mt-5 md:mt-0 md:col-span-2">
-                            <div class="grid grid-cols-8 gap-6">
-                                <div class="col-span-4 sm:col-span-3">
-                                    <label
-                                        for="first-name"
-                                        class="block text-sm font-medium text-gray-700"
-                                        >First Name</label
-                                    >
-                                    <input
-                                        type="text"
-                                        name="first-name"
-                                        id="first-name"
-                                        autocomplete="given-name"
-                                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                        v-model="owner.first_name"
-                                    />
-                                </div>
-
-                                <div class="col-span-4 sm:col-span-3">
-                                    <label
-                                        for="last-name"
-                                        class="block text-sm font-medium text-gray-700"
-                                        >Last Name</label
-                                    >
-                                    <input
-                                        type="text"
-                                        name="last-name"
-                                        id="last-name"
-                                        autocomplete="family-name"
-                                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                        v-model="owner.last_name"
-                                    />
-                                </div>
-
-                                <div class="col-span-4 sm:col-span-3">
-                                    <label
-                                        for="email-address"
-                                        class="block text-sm font-medium text-gray-700"
-                                        >Email address</label
-                                    >
-                                    <input
-                                        type="text"
-                                        name="email-address"
-                                        id="email-address"
-                                        autocomplete="email"
-                                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                        v-model="owner.email"
-                                    />
-                                </div>
-
-                                <div class="col-span-4 sm:col-span-3">
-                                    <label
-                                        for="phone-number"
-                                        class="block text-sm font-medium text-gray-700"
-                                        >Phone Number</label
-                                    >
-                                    <input
-                                        type="text"
-                                        name="phone-number"
-                                        id="email-address"
-                                        autocomplete="phone number"
-                                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                        v-model="owner.phone_number"
-                                    />
-                                </div>
-                            </div>
-                            <div
-                                v-for="(pet, counter) in pets"
-                                v-bind:key="counter"
-                            >
-                                <div class="grid grid-cols-8 gap-6 mt-6">
+                            <form action="#" method="POST">
+                                <div class="grid grid-cols-8 gap-6">
                                     <div class="col-span-4 sm:col-span-3">
                                         <label
-                                            for="pets"
+                                            for="first-name"
                                             class="block text-sm font-medium text-gray-700"
-                                            >Name
-                                        </label>
+                                            >First Name</label
+                                        >
                                         <input
                                             type="text"
+                                            name="first-name"
+                                            id="first-name"
+                                            autocomplete="given-name"
                                             class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                            v-model="pet.name"
+                                            v-model="owner.first_name"
                                         />
                                     </div>
 
                                     <div class="col-span-4 sm:col-span-3">
                                         <label
-                                            for="species"
+                                            for="last-name"
                                             class="block text-sm font-medium text-gray-700"
-                                            >Species</label
-                                        >
-                                        <select
-                                            name="species"
-                                            id="species"
-                                            autocomplete="species"
-                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                            v-model="pet.species"
-                                        >
-                                            <option>Dog</option>
-                                            <option>Cat</option>
-                                            <option>Bird</option>
-                                            <option>Hamster</option>
-                                            <option>Fish</option>
-                                            <option>Reptile</option>
-                                            <option>Other</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-span-4 sm:col-span-3">
-                                        <label
-                                            for="color"
-                                            class="block text-sm font-medium text-gray-700"
-                                            >Color</label
-                                        >
-                                        <select
-                                            name="color"
-                                            id="color"
-                                            autocomplete="color"
-                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                        >
-                                            <option>White</option>
-                                            <option>Black</option>
-                                            <option>Brown</option>
-                                            <option>Red</option>
-                                            <option>Gold/Blonde</option>
-                                            <option>Gray</option>
-                                            <option>White</option>
-                                            <option>Tuxedo</option>
-                                            <option>Tabby</option>
-                                            <option>Tortoiseshell</option>
-                                            <option>Calico</option>
-                                            <option>Other/Multi</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-span-4 sm:col-span-3">
-                                        <label
-                                            for="pets"
-                                            class="block text-sm font-medium text-gray-700"
-                                            >Birthday</label
+                                            >Last Name</label
                                         >
                                         <input
-                                            type="date"
+                                            type="text"
+                                            name="last-name"
+                                            id="last-name"
+                                            autocomplete="family-name"
                                             class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                                            v-model="pet.birthday"
+                                            v-model="owner.last_name"
                                         />
                                     </div>
-                                    <button
-                                        class="text-rose-500"
-                                        @click="deletePet"
-                                    >
-                                        Remove Pet
-                                    </button>
+
+                                    <div class="col-span-4 sm:col-span-3">
+                                        <label
+                                            for="email-address"
+                                            class="block text-sm font-medium text-gray-700"
+                                            >Email address</label
+                                        >
+                                        <input
+                                            type="text"
+                                            name="email-address"
+                                            id="email-address"
+                                            autocomplete="email"
+                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                            v-model="owner.email"
+                                        />
+                                    </div>
+
+                                    <div class="col-span-4 sm:col-span-3">
+                                        <label
+                                            for="phone-number"
+                                            class="block text-sm font-medium text-gray-700"
+                                            >Phone Number</label
+                                        >
+                                        <input
+                                            type="text"
+                                            name="phone-number"
+                                            id="email-address"
+                                            autocomplete="phone number"
+                                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                            v-model="owner.phone_number"
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                            <button @click="addPet" class="text-blue-500 mt-8">
-                                + A Pet
-                            </button>
+
+                                <div
+                                    v-for="(pet, counter) in pets"
+                                    v-bind:key="counter"
+                                >
+                                    <div class="grid grid-cols-8 gap-6">
+                                        <div class="col-span-4 sm:col-span-3">
+                                            <span @click="deletePet(counter)"
+                                                >x</span
+                                            >
+
+                                            <label
+                                                for="pets"
+                                                class="block text-sm font-medium text-gray-700"
+                                                >{{ counter + 1 }}. Name
+                                            </label>
+                                            <input
+                                                type="text"
+                                                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                v-model="pet.name"
+                                            />
+                                        </div>
+
+                                        <div class="col-span-4 sm:col-span-3">
+                                            <label
+                                                for="pets"
+                                                class="block text-sm font-medium text-gray-700"
+                                                >Species</label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                v-model="pet.species"
+                                            />
+                                        </div>
+
+                                        <div class="col-span-4 sm:col-span-3">
+                                            <label
+                                                for="pets"
+                                                class="block text-sm font-medium text-gray-700"
+                                                >Color</label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                v-model="pet.color"
+                                            />
+                                        </div>
+
+                                        <div class="col-span-4 sm:col-span-3">
+                                            <label
+                                                for="pets"
+                                                class="block text-sm font-medium text-gray-700"
+                                                >Birthday</label
+                                            >
+                                            <input
+                                                type="text"
+                                                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                v-model="pet.birthday"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button
+                                    @click="addPet"
+                                    class="text-blue-500 mt-8"
+                                >
+                                    + A Pet
+                                </button>
+                            </form>
                         </div>
                     </div>
                     <button
