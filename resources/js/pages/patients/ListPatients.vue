@@ -75,7 +75,15 @@
                         <td
                             class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
                         >
-                            {{ patient.owner }}
+                            <router-link
+                                :to="{
+                                    name: 'owners:edit',
+                                    params: { id: patient.owner_id },
+                                }"
+                                class="underline hover:text-blue-600"
+                                >{{ patient.first_name }}
+                                {{ patient.last_name }}</router-link
+                            >
                         </td>
                         <td
                             class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"

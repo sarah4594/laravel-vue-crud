@@ -100,7 +100,7 @@
                         type="submit"
                         class="px-4 py-2 bg-blue-500 hover:bg-blue-400 rounded text-white mt-8"
                     >
-                        Update
+                        Update Patient
                     </button>
                 </form>
             </div>
