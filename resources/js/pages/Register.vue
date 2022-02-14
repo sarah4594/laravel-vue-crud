@@ -2,63 +2,87 @@
     <div>
         <h2>Registration</h2>
         <form @submit="onSubmit" @reset="onReset">
-            <div>
-                <label
-                    >Name
+            <div class="w-96 flex flex-col gap-4 mt-8">
+                <div>
+                    <label
+                        for="name"
+                        class="block text-sm font-medium text-gray-700"
+                        >Name</label
+                    >
                     <input
                         id="name"
                         name-="name"
                         v-model="form.name"
                         type="text"
-                        class="border"
                         placeholder="Enter name"
                         :state="errors && !errors.name"
+                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     />
-                </label>
-            </div>
-            <div>
-                <label
-                    >Email
+                </div>
+
+                <div>
+                    <label
+                        for="email"
+                        class="block text-sm font-medium text-gray-700"
+                        >Email</label
+                    >
                     <input
                         id="email"
-                        name="email"
+                        name-="email"
                         v-model="form.email"
-                        type="email"
-                        class="border"
+                        type="text"
                         placeholder="Enter email"
                         :state="errors && !errors.email"
+                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                     />
-                </label>
-            </div>
-
-            <div>
-                <label
-                    >Password >
+                </div>
+                <div>
+                    <label
+                        for="password"
+                        class="block text-sm font-medium text-gray-700"
+                        >Password</label
+                    >
                     <input
-                        class="border"
-                        name="password"
                         id="password"
+                        name-="password"
                         v-model="form.password"
-                        placeholder="Enter Password"
-                        type="password"
+                        type="text"
+                        placeholder="Enter password"
                         :state="errors && !errors.password"
-                /></label>
-            </div>
-            <div>
-                <label
-                    >Confirm Password
+                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    />
+                </div>
+                <div>
+                    <label
+                        for="name"
+                        class="block text-sm font-medium text-gray-700"
+                        >Confirm Password</label
+                    >
                     <input
-                        class="border"
-                        name="password"
                         id="password_confirmation"
+                        name="password_confirmation"
                         v-model="form.password_confirmation"
+                        type="text"
                         placeholder="Confirm Password"
-                        type="password"
-                        :state="errors && !errors.password"
-                /></label>
+                        :state="errors && !errors.password_confirmation"
+                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    />
+                </div>
             </div>
-            <button type="submit" class="bg-blue-500">Register</button>
-            <button type="reset" class="border">Reset</button>
+            <div class="flex gap-4">
+                <button
+                    type="submit"
+                    class="px-4 py-2 bg-blue-500 hover:bg-blue-400 rounded text-white mt-8"
+                >
+                    Register
+                </button>
+                <button
+                    type="reset"
+                    class="px-4 py-2 bg-white hover:bg-gray-100 rounded text-gray-800 mt-8 border"
+                >
+                    Reset
+                </button>
+            </div>
         </form>
     </div>
 </template>
