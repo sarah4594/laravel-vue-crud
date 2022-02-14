@@ -1,6 +1,6 @@
-import List from "../pages/owners/List.vue";
-import Create from "../pages/owners/Create.vue";
-import Edit from "../pages/owners/Edit.vue";
+import ListOwners from "../pages/owners/ListOwners.vue";
+import CreateOwner from "../pages/owners/CreateOwner.vue";
+import EditOwner from "../pages/owners/EditOwner.vue";
 import defineRoutes from "./defineRoutes";
 
 export default function (basePath) {
@@ -8,17 +8,17 @@ export default function (basePath) {
         {
             name: "list",
             path: "/",
-            component: List,
+            component: ListOwners,
         },
         {
             name: "create",
             path: "/create",
-            component: Create,
+            component: CreateOwner,
         },
         {
             name: "edit",
             path: "/edit/:id",
-            component: Edit,
+            component: EditOwner,
         },
     ]);
 }
