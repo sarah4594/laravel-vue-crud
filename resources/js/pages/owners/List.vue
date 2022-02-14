@@ -114,7 +114,7 @@ export default {
         };
     },
     created() {
-        this.axios.get("/api/owners/").then((response) => {
+        this.axios.get("/owners/").then((response) => {
             this.owners = response.data;
         });
     },

@@ -29,7 +29,7 @@ Route::middleware('auth:sanctum')->group(function () {
     });
 });
 
-// Route::middleware('api')->group(function () {
-//     Route::resource('patients', PatientController::class);
-//     Route::resource('owners', OwnerController::class);
-// });
+Route::middleware('api')->group(function () {
+    Route::resource('patients', PatientController::class);
+    Route::resource('owners', OwnerController::class);
+});

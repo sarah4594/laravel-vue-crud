@@ -5,6 +5,8 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Store from "./store";
+import patientsRoutes from "./routes/patients";
+import ownersRoutes from "./routes/owners";
 
 const routes = [
     {
@@ -34,6 +36,7 @@ const routes = [
                     requiresAuth: true,
                 },
             },
+            ...ownersRoutes("owners"),
         ],
     },
 ];
