@@ -85,6 +85,12 @@
                                         </button>
                                     </div>
                                 </form>
+                                <div
+                                    class="text-center text-red-500 mt-2"
+                                    v-if="serverError"
+                                >
+                                        {{ serverError }}
+                                </div>
                             </div>
                         </div>
                     </div>
