@@ -139,7 +139,7 @@ export default {
                             })
                             .then(() => {
                                 this.getUser().then((res) => {
-                                    this.$router.push("/dashboard");
+                                    this.$router.push("/owners");
                                 });
                             })
                             .catch((err) => {
