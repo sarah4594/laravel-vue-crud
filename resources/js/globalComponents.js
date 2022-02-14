@@ -1,7 +1,7 @@
 //resources/js/globalComponents.js
 import Vue from "vue";
-import Navigation from "./components/Navigation";
+import ProtectedNavigation from "./components/ProtectedNavigation";
 import PublicNavigation from "./components/PublicNavigation";
 
-Vue.component("Navigation", Navigation);
+Vue.component("ProtectedNavigation", ProtectedNavigation);
 Vue.component("PublicNavigation", PublicNavigation);

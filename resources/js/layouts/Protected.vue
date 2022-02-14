@@ -1,10 +1,10 @@
 <template>
     <div class="container">
-        <Navigation />
+        <ProtectedNavigation />
         <router-view></router-view>
     </div>
 </template>
 <script>
-import Navigation from "../components/Navigation.vue";
-export default { components: { Navigation } };
+import ProtectedNavigation from "../components/ProtectedNavigation.vue";
+export default { components: { ProtectedNavigation } };
 </script>

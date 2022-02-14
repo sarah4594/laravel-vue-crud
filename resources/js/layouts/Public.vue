@@ -1,6 +1,6 @@
 <template>
     <div class="container mt-2">
-        <PublicNavigation />
+        <!-- <PublicNavigation /> -->
         <router-view></router-view>
     </div>
 </template>
