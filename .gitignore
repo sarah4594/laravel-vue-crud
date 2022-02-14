@@ -16,3 +16,4 @@ yarn-error.log
 /.vscode
 /db
 .DS_Store
+public/css/tailwind.css

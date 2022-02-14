@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Owner;
 
 return new class extends Migration
 {
@@ -18,8 +19,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('species');
             $table->string('color');
-            $table->string('birthday');
-            $table->string('owner');
+            $table->date('birthday');
+            $table->foreignIdFor(Owner::class)->constrained();
             $table->timestamps();
         });
     }
